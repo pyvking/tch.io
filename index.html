@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Free AI Site</title>
+  <meta name="description" content="A tiny free website created by AI and ready to host for free." />
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#e6eef6;background:linear-gradient(180deg,#071029 0%,#071b2b 60%)}
+    .wrap{max-width:920px;margin:36px auto;padding:22px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{font-size:1.35rem;margin:0}
+    p.lead{color:var(--muted);margin-top:6px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);margin-top:18px;border:1px solid rgba(255,255,255,0.03)}
+    .hero{display:grid;gap:12px}
+    .btn{background:linear-gradient(90deg,var(--accent),#3b82f6);padding:10px 14px;border-radius:10px;color:#042027;text-decoration:none;font-weight:600}
+    .cols{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    form .row{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;font:inherit}
+    textarea{min-height:120px}
+    footer{margin-top:18px;color:var(--muted);font-size:.9rem;text-align:center}
+    @media(min-width:820px){.cols{grid-template-columns:1fr 360px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Your Free AI Site</h1>
+        <p class="lead">AI-generated, zero-cost, and ready to publish in minutes.</p>
+      </div>
+      <nav><a class="btn" href="#contact">Contact</a></nav>
+    </header>
+
+    <main>
+      <section class="card hero" aria-labelledby="hero-title">
+        <div>
+          <h2 id="hero-title">Launch a free website — created by AI, hosted for free</h2>
+          <p class="lead">This single file contains everything you need. Paste it into GitHub Pages or Replit and go live instantly.</p>
+          <p style="margin:8px 0"><a class="btn" href="#quick">Get started — free</a></p>
+        </div>
+
+        <div class="cols">
+          <div>
+            <h3 style="margin-top:0">What you get</h3>
+            <div class="features">
+              <div class="feature"><strong>Single HTML file</strong><div class="muted">Easy to edit & publish</div></div>
+              <div class="feature"><strong>Contact form</strong><div class="muted">Sends to your email for free</div></div>
+              <div class="feature"><strong>Mobile first</strong><div class="muted">Looks good on phones</div></div>
+              <div class="feature"><strong>Simple CSS</strong><div class="muted">No frameworks needed</div></div>
+            </div>
+          </div>
+
+          <aside class="card" style="background:rgba(255,255,255,0.02)">
+            <h4 style="margin:0 0 8px 0">Quick setup</h4>
+            <ol style="padding-left:18px;margin:6px 0;color:var(--muted)">
+              <li>Create a free GitHub account (or Replit account).</li>
+              <li>Upload this file as <code>index.html</code>.</li>
+              <li>Enable GitHub Pages or click Run on Replit — site goes live.</li>
+            </ol>
+            <p style="margin:8px 0 0 0;color:var(--muted)">Scroll down for the contact form (works with FormSubmit).</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="card" id="contact" aria-labelledby="contact-title">
+        <h3 id="contact-title">Contact (free)</h3>
+        <p class="lead">To receive messages in your Gmail without paying: replace <code>youremail@example.com</code> below with your email. No server required.</p>
+
+        <!-- Replace youremail@example.com with your real email address -->
+        <form action="https://formsubmit.co/youremail@example.com" method="POST">
+          <!-- disable captcha and set subject (FormSubmit: optional hidden inputs) -->
+          <input type="hidden" name="_autoresponse" value="Thanks — we got your message!">
+          <input type="hidden" name="_subject" value="New message from your AI site">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="row">
+            <label>Name<input name="name" type="text" required placeholder="Your name"></label>
+            <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+            <label>Message<textarea name="message" required placeholder="Write your message..."></textarea></label>
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+
+        <p style="margin-top:12px;color:var(--muted)">FormSubmit will send a verification email to the address you put here the first time — follow it to activate delivery.</p>
+      </section>
+    </main>
+
+    <footer>
+      <small>Made with AI • Free hosting options: GitHub Pages or Replit • Ask me to customize this now</small>
+    </footer>
+  </div>
+</body>
+</html>
+
